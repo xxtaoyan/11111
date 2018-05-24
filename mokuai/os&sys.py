@@ -43,4 +43,16 @@ os.makedirs('text/text')  # 生成多层递归目录 已存在 报错
 os.removedirs('text/text')  # 若目录为空，则删除，并递归到上一级目录，如若也为空，则删除
 #
 # os.chdir("dirname")  改变当前脚本工作目录；相当于shell下cd
-# os.system("bash command")  运行shell命令，直接显示
+os.system("ipconfig")  # 运行shell命令，直接显示
+
+import sys
+
+
+print(sys.argv)  # 命令行参数List，第一个元素是程序本身路径
+# sys.exit(0)  # 退出程序，正常退出时exit(0)
+print(sys.version)  # 获取Python解释程序的版本信息
+print(sys.maxunicode )   # 最大的Int值
+print(sys.path)   # 返回模块的搜索路径，初始化时使用PYTHONPATH环境变量的值
+print(sys.platform)  # 返回操作系统平台名称
+sys.stdout.write('please:')
+val = sys.stdin.readline()[: -1]
